@@ -1,0 +1,64 @@
+{
+  "expo": {
+    "name": "Ascent AI Trainer",
+    "slug": "ascent-ai-trainer",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "scheme": "ascent",
+    "userInterfaceStyle": "dark",
+    "newArchEnabled": true,
+    "backgroundColor": "#05060a",
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#05060a"
+    },
+    "android": {
+      "package": "app.ascent.trainer",
+      "versionCode": 1,
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#05060a",
+        "monochromeImage": "./assets/monochrome-icon.png"
+      },
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.INTERNET"
+      ]
+    },
+    "ios": {
+      "bundleIdentifier": "app.ascent.trainer",
+      "supportsTablet": false,
+      "infoPlist": {
+        "NSCameraUsageDescription": "Take progress photos for your transformation gallery.",
+        "NSPhotoLibraryUsageDescription": "Choose progress photos to track your transformation."
+      }
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Choose progress photos to track your transformation.",
+          "cameraPermission": "Take progress photos for your transformation gallery."
+        }
+      ],
+      "expo-font",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/splash.png",
+          "resizeMode": "contain",
+          "backgroundColor": "#05060a"
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "extra": {
+      "apiBaseUrl": "https://tokenharbor.ai/v1"
+    }
+  }
+}
